@@ -1,6 +1,6 @@
 
 body {
-    font-family: 'Roboto', Arial, sans-serif; /* Ensures consistent font across the site */
+    font-family: 'Work Sans','Roboto', sans-serif; /* Ensures consistent font across the site */
     color: #333; /* Default text color */
     background-color: #fff; /* White background */
     margin: 20; /* Removes default browser margin */
@@ -64,23 +64,7 @@ nav {
     display: none; /* Hide dropdown button by default */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .dropdown-button {
-        display: block; /* Show dropdown button in mobile view */
-        margin-left: auto; /* Aligns button to the right */
-    }
-    
-    .nav-links {
-        display: none; /* Hide nav links in mobile view */
-        flex-direction: column; /* Stack links vertically */
-        width: 100%; /* Full width */
-    }
 
-    .nav-links.active {
-        display: flex; /* Show nav when active */
-    }
-}
 
 
 /* homepage */
@@ -132,7 +116,7 @@ nav {
 
 .intro h1 {
     font-size: 60px;  /* Adjust the size as needed */
-    font-weight: bold; /* Makes the font bold, adjust as needed */
+    font-weight: 800; /* Makes the font bold, adjust as needed */
     color: #333;  /* Set the color if needed */
     margin-bottom: 0;  /* Adjust spacing below the heading */
 }
@@ -160,6 +144,7 @@ nav {
     flex-direction: row; /* Keeps shapes in a row */
     justify-content: flex-start; /* Even spacing around each shape */
     gap: 10px;
+    
 }
 
 .shape {
@@ -170,11 +155,14 @@ nav {
     font-weight: bold;
     text-decoration: none;
     padding: 5px; /* Reduced padding */
-    font-size: 13px; /* Reduced font size for better fit */
-    min-width: 70px; /* Reduced width */
-    height: 70px; /* Reduced height */
+    font-size: 15px; /* Reduced font size for better fit */
+    min-width: 100px; /* Reduced width */
+    height: 100px; /* Reduced height */
     text-align: center;
     border-radius: 8px;
+    font-family: 'Roboto';
+    transition: filter 0.3s ease; 
+    
 }
 
 
@@ -182,6 +170,11 @@ nav {
 .rectangle { background-color: #F1503B; }
 .trapezoid { background-color: #00A550; clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%); }
 .hexagon { background-color: #30BFBF; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+
+/* Hover effects to lighten the background color */
+.shape:hover {
+    filter: brightness(1.5); /* Lighten the background color by 20% */
+}
 
 
 /* Adjust the left margin if necessary */
@@ -223,12 +216,14 @@ nav {
     justify-content: center;
     color: white;
     font-weight: bold;
+    font-family: 'Roboto';
     text-decoration: none;
     width: 100px;
     height: 100px;
     text-align: center;
     margin-right: 20px;
     padding:5px
+    
 }
 
 /* Specific for triangle or circle to move it slightly right */
@@ -333,12 +328,14 @@ nav {
     justify-content: center;
     color: white;
     font-weight: bold;
+    font-family: 'Roboto';
     text-decoration: none;
     width: 100px;
     height: 100px;
     text-align: center;
     margin-right: 20px;
     padding:5px
+    
 }
 
 /* Specific for triangle or circle to move it slightly right */
@@ -373,8 +370,15 @@ nav {
     padding-right: 10vw;
     font-size: 13px;
     
+    
 }
 
+
+.experience-item h3, .skills-item h3 {
+
+    font-weight: 900;
+    font-family: 'Roboto';
+}
 
 .experience-item{
 
@@ -430,11 +434,14 @@ nav {
     height: 100px; /* Height of the square, equal to the width for a perfect square */
     font-size: 16px; /* Ensures the font is visible and clear */
     font-weight: bold; /* Bold font weight for visibility */
+    font-family: 'Roboto';
     padding: 0; /* No padding needed because we are using flexbox to center the content */
     border-radius: 10px; /* Optional: adds rounded corners to the square */
     margin: 20px 0; /* Space above and below the title */
     text-align: center; /* Ensure text is centered if flexbox alignment fails */
     margin-left: 10vw
+    
+   
 }
 
 .project-card h3 {
@@ -444,6 +451,7 @@ nav {
     font-size: 18px; /* Slightly smaller font size for project titles */
     font-weight: bold; /* Maintain bold styling for emphasis */
     background-color: transparent; /* Clear any background styling */
+    font-family: 'Roboto';
 }
 
 .project-info h3 a {
@@ -487,15 +495,22 @@ nav {
 
 
 #contact h2 {
-   
-   
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
-    margin-top: -5px;
-
-
-   
+    margin-top: 0;  /* Reduced or removed to bring elements closer */
+    margin-bottom: 10px;  /* Smaller bottom margin */
 }
+
+.contact-details p {
+    margin-top: 0;  /* Remove default top margin */
+    margin-bottom: 10px;  /* Consistent smaller bottom margin for all paragraphs */
+}
+
+.email-label {
+    display: block;  /* Ensures it behaves like a block element with full width */
+    margin-bottom: 5px;  /* Smaller space between label and email address */
+}
+
 
 
 .contact-container {
@@ -504,6 +519,7 @@ nav {
     margin-left: 15vw; /* Adjust as needed */
     margin-right: 15vw; /* Adjust as needed */
     font-size: 13px;
+    
 }
 
 .contact-details {
@@ -513,7 +529,7 @@ nav {
 }
 
 .social-icons {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     justify-content: flex-start; /* Align icons to the left */
 }
@@ -527,66 +543,80 @@ nav {
     height: 40px;
 }
 
-.contact-form {
-    flex: 2; /* Take up 2/3 of the space */
-}
-
 .contact-form form {
-    max-width: 100%; /* Utilize all available space */
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-rows: repeat(3, auto); /* Three rows */
+    gap: 20px; /* Uniform space between all grid items */
+    padding: 20px; /* Padding around the form */
 }
 
-.contact-form form .form-group {
+/* Flexbox setup for the input groups */
+.contact-form .form-group1, .contact-form .form-group2 {
     display: flex;
-    gap: 10px;
+    justify-content: space-between; /* Distributes space evenly between inputs */
 }
 
+.contact-form .form-group3 {
+    display: flex;
+   
+    align-items: center; /* Center aligns items vertically */
+    gap: 10px; /* Space between textarea and button */
+}
+
+/* Styling for the input and textarea elements */
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    width: 100%;
+    width: 70%; /* Full width within their container */
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0; /* No rounded corners */
 }
 
-.contact-form textarea {
-    grid-column: span 1.5;
+/* Adjust input sizes for better visual appeal */
+.contact-form .form-group1 input,
+.contact-form .form-group2 input {
+    flex: 1; /* Each input takes up equal space */
+    margin-right: 10px; /* Margin between inputs */
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column; /* Stack the inputs and the button vertically */
-    align-items: flex-end; /* Aligns the children (inputs and button) to the right */
+.contact-form .form-group1 input:last-child,
+.contact-form .form-group2 input:last-child {
+    margin-right: 0; /* No margin on the last input */
 }
 
-/* Keep the rest of the button styles unchanged */
+/* Submit button styling */
 .contact-form button {
-    width: 100px;
-    height: 100px;
-    background-color: #ffcc00;
-    color: #fff;
+    width: 80px; /* Width of the button */
+    height: 80px; /* Circular button */
+    border-radius: 50%; /* Rounded corners for circle */
+    background-color: #e6b800;; /* Yellow background for the button */
+    color: rgb(254, 254, 254); /* Text color */
     border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    font-size: 16px;
-    line-height: 1;
-    margin-top: 20px; /* Adds some space between the message box and the button */
-    margin-left: 55px;
+    cursor: pointer; /* Changes cursor to a hand pointer */
 }
 
-
-
+/* Hover effect for the button */
 .contact-form button:hover {
-    background-color: #e6b800;
+    background-color: yellow;
 }
 
+
+
+
+
+.email-label {
+   
+    font-size: 19px;
+    font-weight: 900;
+    
+}
+
+
+input::placeholder, textarea::placeholder {
+    font-family: 'Work Sans', sans-serif;
+    color: #888;  /* Optional: sets a custom color for the placeholder text */
+}
 
 
 footer {
@@ -598,8 +628,27 @@ footer {
 }
 
 
-.email-label {
-   
-    font-size: 16px;
-    
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

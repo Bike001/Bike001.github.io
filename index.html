@@ -6,6 +6,8 @@
     <title>Bike Qian's Personal Website</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Adding Roboto Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
@@ -41,7 +43,7 @@
                 <a href="#about" class="shape circle about">About</a>
                 <a href="#experience" class="shape trapezoid experience">Experience</a>
                 <a href="#projects" class="shape rectangle projects">Projects</a>
-                <a href="#contact" class="shape hexagon contact">Contact</a>
+                <!-- <a href="#contact" class="shape hexagon contact">Contact</a> -->
             </div>
         </div>
     </section>
@@ -55,7 +57,7 @@
         </div>
         <div class="about-text">
             <p>Hello! I'm Bike Qian, currently pursuing my master's degree in Computer Science at the Georgia Institute of Technology with a specialization in Machine Learning. I have a strong foundation in software engineering and a passion for developing innovative solutions that leverage the latest in technology.</p>
-            <p>My journey began at California State University, Fullerton, where I completed my first master's degree in Computer Science, achieving a GPA of 3.85. I also hold a bachelor's degree of Engineering from Zhejiang Sci-Tech University.</p>
+            <p>My journey began at California State University, Fullerton, where I completed my first master's degree in Computer Science. I also hold a bachelor's degree of Engineering from Zhejiang Sci-Tech University.</p>
             <p>Professionally, I have interned as a Software Engineer at UTE Aerospace, where I contributed to both the development and maintenance of the website and critical software systems, ensuring adherence to the highest standards of safety and reliability in the aerospace industry.</p>
             <p>Beyond my academic and professional endeavors, I am deeply involved in personal projects that explore the boundaries of machine learning and data science. I have developed systems such as a real-time stock prediction platform using Apache Spark and Kafka, and an AI-driven social media friend recommendation system, showcasing my ability to handle complex data and build systems that perform at scale.</p>
             <p>I'm an avid learner and continue to seek out new challenges that push the limits of what I can achieve with technology. If you're interested in collaborating or just want to chat about tech, feel free to reach out!</p>
@@ -237,18 +239,21 @@
         </div>
         <div class="contact-form">
             <form action="mailto:Goodbyemeteor@gmail.com" method="post" enctype="text/plain">
-                <div class="form-group">
+                <div class="form-group1">
                     <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
                     <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group2">
                     <input type="email" id="email" name="email" placeholder="Email" required>
                     <input type="text" id="subject" name="subject" placeholder="Subject" required>
                 </div>
-                <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
-                <button type="submit">Submit</button>
+                <div class="form-group3">
+                    <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
+                    <button type="submit">Submit</button>
+                </div>
             </form>
         </div>
+        
     </div>
 </section>
 
