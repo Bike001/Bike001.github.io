@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Qian's Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Bike Qian</h1>
+        </div>
+        <nav>
+            <button class="dropdown-button">Menu</button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="button">Say Hi!</a></li>
+            </ul>
+           
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="intro">
+            <h2>Hello, I'm Bike Qian</h2>
+            <p>CS Graduate Student / Software Engineer Intern / Machine Learning Enthusiast</p>
+            <div class="social-links">
+                <a href="https://github.com/Bike001" target="_blank">
+                    <img src="github.png" alt="GitHub" class="social-icon github-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/bike-qian-99b38a288/" target="_blank">
+                    <img src="linkedin.png" alt="LinkedIn" class="social-icon linkedin-icon">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="content">
+            <div class="column">
+                <h3>Education</h3>
+                <ul>
+                    <li>Georgia Institute of Technology | MS in Computer Science (2024-2026)</li>
+                    <li>California State University, Fullerton | MS in Computer Science (2022-2024) | GPA: 3.85/4.0</li>
+                    <li>Zhejiang Sci-Tech University | Bachelor of Engineering in Industrial Design (2007-2011)</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Python, Java, C++, C#, SQL, RESTful APIs, Node.js, PHP, Assembly, Prolog</li>
+                    <li>MySQL, PostgreSQL, MongoDB, AWS, Docker, Kubernetes, Hadoop</li>
+                    <li>Django, .NET, VS Code, Xcode, Linux, Git, IntelliJ IDEA, React.js, Bootstrap, Apache Spark, Numpy, Pandas</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <h3>UTE Aerospace | Software Engineer Intern (May 2024 - Present)</h3>
+            <ul>
+                <li>Supporting the development and maintenance of the company website, focusing on enhancing user interface and user experience optimizations.</li>
+                <li>Scheduled to assist in the creation and testing of DO-178-compliant software, focusing on key areas such as fault management systems and safety-critical software features to ensure adherence to rigorous aerospace standards.</li>
+                <li>Preparing to engage in rigorous testing protocols to enhance software reliability and ensure compliance with stringent aerospace industry standards.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>AI-Driven Social Media Friend Recommendation System</h3>
+            <p>Engineered a multi-tiered web application for dynamic friend recommendations with 98.19% accuracy across 28 emotions.</p>
+            <a href="https://github.com/Bike001/Signal-An-AI-Driven-Social-Media-Friend-Recommendation-System">GitHub Repository</a>
+        </div>
+        <div class="project-card">
+            <h3>Real-time Stock Prediction System</h3>
+            <p>Developed a real-time stock prediction system using Apache Spark for data processing and Apache Kafka for data streaming, handling up to 1,200 API requests per minute.</p>
+            <a href="https://github.com/Bike001/Real-time-stock-prediciton-system">GitHub Repository</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-form">
+            <form action="mailto:Goodbyemeteor@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/bike-qian-99b38a288/"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="https://github.com/Bike001"><img src="github.png" alt="GitHub"></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bike Qian</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuButton = document.querySelector('.dropdown-button');
+            var navLinks = document.querySelector('.nav-links');
+
+            menuButton.addEventListener('click', function() {
+                // Toggle the 'active' class on the nav links
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

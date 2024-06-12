@@ -1,0 +1,286 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Higher than the content to stay on top */
+}
+
+header, #home {
+    background-image: url('Background.png'); /* Ensure the path is correct based on the location of your CSS file relative to your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    padding-left: 3rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav .button {
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+section#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20.5rem 2rem;
+    
+}
+
+
+@media (max-width: 768px) {
+    section#home {
+        padding: 10vh 5vw; /* Dynamic padding based on screen size */
+    }
+
+    header .logo h1 {
+        font-size: 4vw; /* Adjust font size based on viewport width */
+    }
+
+    section#home .intro h2 {
+        font-size: 5vw; /* Adjust heading size for better mobile readability */
+    }
+
+    section#home .intro p {
+        font-size: 3.5vw; /* Adjust paragraph size for mobile */
+    }
+
+    nav ul li {
+        margin: 0 3vw; /* Adjust navigation link spacing for smaller screens */
+    }
+
+    nav .button {
+        padding: 2vh 4vw; /* Use viewport units for button padding */
+    }
+
+    section#home .intro .button {
+        padding: 2vh 4vw; /* Ensure button sizing is suitable for touch interaction */
+    }
+}
+
+section#home .intro {
+    max-width: 70%;
+    text-align: left;
+    padding-left: 2rem;
+    text-shadow: 2px 2px 4px rgba(14, 14, 14, 0.5);
+}
+
+section#home .intro h2 {
+    font-size: 5.5rem;
+    margin-top: 10px;  /* Adjust the top margin */
+    margin-bottom: 20px;  /* Adjust the bottom margin */
+
+}
+
+section#home .intro p {
+    font-size: 1.25rem;
+}
+
+
+.social-links {
+    display: flex;            /* Aligns children (links) in a row */
+    align-items: center;      /* Centers items vertically */
+    justify-content: flex-start; /* Aligns items to the start of the flex container */
+}
+
+.social-links .social-icon {
+    height: 40px;
+    width: 40px;
+}
+
+.social-links .github-icon {
+    margin-right: 10px;  /* Only apply margin to GitHub icon */
+}
+
+/* Remove underline and borders for images inside links */
+.social-links a {
+    text-decoration: none;
+    border: none;
+    display: inline-flex;  /* Use inline-flex if align-items does not work as intended */
+    align-items: center;
+}
+
+.social-links a img {
+    display: block;  /* Removes unwanted space below images */
+}
+
+
+#about, #experience, #projects, #contact{
+    background-image: url('Background1.png'); /* Ensure the path is correct based on the location of your CSS file relative to your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 16.5rem 2rem;
+}
+
+#projects{
+
+    background-image: url('Background1.png'); /* Ensure the path is correct based on the location of your CSS file relative to your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 19.5rem 2rem;
+
+}
+
+
+footer{
+    background-image: url('Background.png'); /* Ensure the path is correct based on the location of your CSS file relative to your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+section#experience .experience-item {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+section#projects .project-card {
+    max-width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+}
+
+section#projects .project-card h3 {
+    margin-top: 0;
+}
+
+section#projects .project-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #000;
+    text-decoration: none;
+    background: #f4f4f4;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+section#contact .contact-form {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+section#contact .contact-form label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+}
+
+section#contact .contact-form input, 
+section#contact .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+section#contact .contact-form button {
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section#contact .social-icons {
+    margin-top: 2rem;
+}
+
+section#contact .social-icons a {
+    margin: 0 0.5rem;
+    display: inline-block;
+}
+
+footer {
+   
+    color: #0f0f0f;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+
+
+
+.dropdown-button {
+    display: none ;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 450px) {
+    .dropdown-button {
+        display: block; /* Show the dropdown button */
+    }
+
+    .nav-links {
+        display: none; /* Initially hide the links */
+        flex-direction: column; /* Stack them vertically */
+        width: 100%; /* Full width */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+    }
+}
+
+

@@ -3,20 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Portfolio</title>
+    <title>Bike Qian's Personal Website</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Adding Roboto Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
+
 </head>
+
 <body>
     <header>
-        <h1>My Portfolio</h1>
-        <p>This is a brief introduction about myself.</p>
+        <div class="logo">
+            <h1>Bike Qian</h1>
+        </div>
+        <nav>
+            <button class="dropdown-button">Menu</button>
+            <ul class="nav-links">
+              
+                <li><a href="#about">About</a></li>
+               
+                <li><a href="#contact" class="button">Say Hi!</a></li>
+            </ul>
+           
+        </nav>
     </header>
-    <section>
-        <h2>Projects</h2>
-        <p>Here you can find some of my projects.</p>
+
+    <section id="home" class="home-grid">
+        <div class="profile-pic">
+            <img src="portrait.jpg" alt="Bike Qian">
+        </div>
+        <div class="intro">
+            <h1>Bike <br> Qian</h1>
+            <p class="role">CS Graduate Student , Software Engineer Intern</p>
+            <p class="interest">Machine Learning Enthusiast</p>
+            <div class="nav-shapes">
+                <a href="#about" class="shape circle about">About</a>
+                <a href="#experience" class="shape trapezoid experience">Experience</a>
+                <a href="#projects" class="shape rectangle projects">Projects</a>
+                <a href="#contact" class="shape hexagon contact">Contact</a>
+            </div>
+        </div>
     </section>
-    <footer>
-        <p>Contact me at <a href="mailto:example@example.com">example@example.com</a>.</p>
-    </footer>
+    
+    
+
+    
+    <section id="about">
+        <div class="about-header">
+            <div class="shape1 circle1">About</div>
+        </div>
+        <div class="about-text">
+            <p>Hello! I'm Bike Qian, currently pursuing my master's degree in Computer Science at the Georgia Institute of Technology with a specialization in Machine Learning. I have a strong foundation in software engineering and a passion for developing innovative solutions that leverage the latest in technology.</p>
+            <p>My journey began at California State University, Fullerton, where I completed my first master's degree in Computer Science, achieving a GPA of 3.85. I also hold a bachelor's degree of Engineering from Zhejiang Sci-Tech University.</p>
+            <p>Professionally, I have interned as a Software Engineer at UTE Aerospace, where I contributed to both the development and maintenance of the website and critical software systems, ensuring adherence to the highest standards of safety and reliability in the aerospace industry.</p>
+            <p>Beyond my academic and professional endeavors, I am deeply involved in personal projects that explore the boundaries of machine learning and data science. I have developed systems such as a real-time stock prediction platform using Apache Spark and Kafka, and an AI-driven social media friend recommendation system, showcasing my ability to handle complex data and build systems that perform at scale.</p>
+            <p>I'm an avid learner and continue to seek out new challenges that push the limits of what I can achieve with technology. If you're interested in collaborating or just want to chat about tech, feel free to reach out!</p>
+        </div>
+       
+        <div class="education-shape shape1 triangle">Education</div>
+        <div class="content">
+            <div class="column education">
+                <ul>
+                    <li>Georgia Institute of Technology | MS in Computer Science, Specialization in Machine Learning (In Progress)</li>
+                  
+                    <li>California State University, Fullerton | MS in Computer Science </li>
+                   
+                    <li>Zhejiang Sci-Tech University | Bachelor of Engineering  </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+    <section id="experience">
+        <div class="experience shape2 trapezoid1 experience-shape">Experience</div>
+        <div class="experience-item">
+            <h3>UTE Aerospace | Software Engineer Intern (May 2024 - Present)</h3>
+            <ul>
+                <li>Supporting the development and maintenance of the company website, focusing on enhancing user interface and user experience optimizations.</li>
+                <li>Scheduled to assist in the creation and testing of DO-178-compliant software, focusing on key areas such as fault management systems and safety-critical software features to ensure adherence to rigorous aerospace standards.</li>
+                <li>Preparing to engage in rigorous testing protocols to enhance software reliability and ensure compliance with stringent aerospace industry standards.</li>
+            </ul>
+        </div>
+        <div class="skills shape2 parallelogram skills-shape">Skills</div>
+        <div class="skills skills-item">
+            <h3>Skills</h3>
+            <ul>
+                <li>Python, Java, C++, C#, SQL, RESTful APIs, Node.js, PHP, Assembly, Prolog</li>
+                <li>MySQL, PostgreSQL, MongoDB, AWS, Docker, Kubernetes, Hadoop</li>
+                <li>Django, .NET, VS Code, Xcode, Linux, Git, IntelliJ IDEA, React.js, Bootstrap, Apache Spark, Numpy, Pandas</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+    <section id="projects">
+        <h2>Projects</h2>
+    
+        <!-- AI-Driven Social Media Friend Recommendation System -->
+        <div class="project-card">
+            <div class="project-info">
+                <h3><a href="https://github.com/Bike001/Signal-An-AI-Driven-Social-Media-Friend-Recommendation-System" target="_blank">AI-Driven Social Media Friend Recommendation System</a></h3>
+                <ul>
+                    <li>Engineered a multi-tiered web application for dynamic friend recommendations with 98.19% accuracy across 28 emotions.</li>
+                    <li>Developed a React-based SPA for seamless user interactions without page reloads.</li>
+                    <li>Implemented backend logic in Django, handling business operations, database transactions, and user authentication.</li>
+                    <li>Integrated a Prolog server for complex decision-making and enhanced accuracy in friend recommendations.</li>
+                    <li>Designed RESTful API layers to support CRUD operations and connect frontend, backend, and Prolog server.</li>
+                </ul>
+            </div>
+            <div class="project-image">
+                <img src="stockai.png" alt="Social Media Recommendation System">
+            </div>
+        </div>
+    
+        <!-- Real-time Stock Prediction System -->
+        <div class="project-card">
+            <div class="project-info">
+                <h3><a href="https://github.com/Bike001/Real-time-stock-prediciton-system" target="_blank">Real-time Stock Prediction System</a></h3>
+                <ul>
+                    <li>Developed a real-time stock prediction system using Apache Spark for data processing and Apache Kafka for data streaming, handling up to 1,200 API requests per minute.</li>
+                    <li>Engineered a linear regression model on Spark, trained on historical financial data, achieving a best RMSE of 1.69 for daily stock price predictions.</li>
+                    <li>Utilized the last 20 days of data for daily forecasts, ensuring robust performance and scalability for real-time data processing and prediction demands.</li>
+                </ul>
+            </div>
+            <div class="project-image">
+                <img src="stock.jpeg" alt="Stock Prediction System">
+            </div>
+        </div>
+    
+        <!-- Medical Scheduling Platform -->
+<div class="project-card">
+    <div class="project-info">
+        <h3><a href="https://github.com/Bike001/Medical_scheduling" target="_blank">Medical Scheduling Platform</a></h3>
+        <ul>
+            <li>Dynamic appointment scheduling for streamlined service coordination.</li>
+            <li>Instant messaging system for efficient communication between providers and patients.</li>
+            <li>Advanced profile management for personalized healthcare experiences.</li>
+            <li>Enhanced search functionality to quickly locate healthcare providers.</li>
+            <li>Secure database integration using PHP and MySQL for reliable data handling.</li>
+            <li>User-friendly interface designed for ease of use across devices.</li>
+        </ul>
+    </div>
+    <div class="project-image">
+        <img src="medical.jpg" alt="Medical Scheduling Platform">
+    </div>
+</div>
+    
+        <!-- Diet Recommendation System -->
+<div class="project-card">
+    <div class="project-info">
+        <h3><a href="https://colab.research.google.com/drive/1UObSaShqKljofDtQxFxQ97hFdhvQ4aRJ" target="_blank">Diet Recommendation System</a></h3>
+        <ul>
+            <li>Integrates a Bayesian Network analyzing over 30 health variables for 95% accuracy in calorie recommendations.</li>
+            <li>Employs Prolog for executing more than 100 complex dietary rules tailored to individual health conditions.</li>
+            <li>Adjusts dietary plans in real-time for over 500 monthly users, considering environmental factors like weather.</li>
+            <li>Leverages Python and pgmpy for statistical modeling and SWI-Prolog for decision logic, ensuring fast response time.</li>
+        </ul>
+    </div>
+    <div class="project-image">
+        <img src="diet.jpg" alt="Diet Recommendation System">
+    </div>
+</div>
+
+    
+       <!-- Simplified Compiler -->
+<div class="project-card">
+    <div class="project-info">
+        <h3><a href="https://github.com/Bike001/Symplified_Complier" target="_blank">Simplified Compiler</a></h3>
+        <ul>
+            <li>Translates a C++-like language into assembly language through advanced compiler phases.</li>
+            <li>Lexical Analysis: Utilizes Thompson's method for regex to NFSM, enhancing pattern recognition.</li>
+            <li>Semantic Analysis: Ensures type safety and adherence to language standards.</li>
+            <li>Intermediate Code Generation: Converts high-level statements into optimized intermediate code.</li>
+            <li>Object Code Generation: Translates intermediate code to assembly language, ready for execution.</li>
+            <li>Efficient NFSM to DFSM conversion: Streamlines the automata for faster analysis.</li>
+            <li>Implements robust optimization techniques to minimize runtime and enhance performance.</li>
+            <li>Comprehensive error handling provides detailed feedback for debugging and code refinement.</li>
+        </ul>
+    </div>
+    <div class="project-image">
+        <img src="complier.png" alt="Compiler Design">
+    </div>
+</div>
+
+    
+       <!-- Sentiment Analysis on Rate My Professors -->
+<div class="project-card">
+    <div class="project-info">
+        <h3><a href="https://colab.research.google.com/drive/1NSulUTqpoKy961pmbMHL1cRSK-5qvbPI" target="_blank">Sentiment Analysis on Rate My Professors</a></h3>
+        <ul>
+            <li>Participated in a team to develop and implement neural network models using GloVe and Word2Vec embeddings to predict student ratings and difficulty levels from 20,000+ professor reviews sourced from RateMyProfessor.</li>
+            <li>Preprocessed textual data by normalizing text and removing punctuations, enhancing the model training process.</li>
+            <li>Built and optimized multiple neural network architectures, including RNNs and GRUs, achieving up to 88.9% accuracy in regression models and 36.03% accuracy in classification models.</li>
+            <li>Utilized technologies such as TensorFlow, Keras, Pandas, and Gensim on the Google Colab platform, contributing to robust data handling and model training.</li>
+            <li>Identified key predictive features in textual reviews, providing insights into factors influencing student perceptions of educational experiences.</li>
+        </ul>
+    </div>
+    <div class="project-image">
+        <img src="NLP.png" alt="Sentiment Analysis Project">
+    </div>
+</div>
+</section>
+
+    
+    
+    
+
+<section id="contact">
+    
+    <div class="contact-container">
+        <div class="contact-details">
+            <h2>Contact</h2>
+            <p>Looking forward to hearing from you</p>
+           
+            <div>
+                <strong class="email-label">Email</strong>
+                <p>Goodbyemeteor@gmail.com</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/bike-qian-99b38a288/" target="_blank">
+                    <img src="linkedin.png" alt="LinkedIn" />
+                </a>
+                <a href="https://github.com/Bike001" target="_blank">
+                    <img src="github.png" alt="GitHub" />
+                </a>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form action="mailto:Goodbyemeteor@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer>
+    <p>&copy; 2024 Bike Qian</p>
+</footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuButton = document.querySelector('.dropdown-button');
+            var navLinks = document.querySelector('.nav-links');
+
+            menuButton.addEventListener('click', function() {
+                // Toggle the 'active' class on the nav links
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
