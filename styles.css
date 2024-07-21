@@ -60,9 +60,7 @@ nav {
     border-radius: 5px; /* Rounds the corners of the button */
 }
 
-.dropdown-button {
-    display: none; /* Hide dropdown button by default */
-}
+
 
 
 
@@ -315,6 +313,8 @@ nav {
 }
 
 
+
+
 .experience-shape, .skills-shape {
     display: flex;
     align-items: center;
@@ -368,7 +368,7 @@ nav {
   
     padding-left: 120px;
     padding-right: 10vw;
-    font-size: 13px;
+    
     
     
 }
@@ -382,11 +382,15 @@ nav {
 
 .experience-item{
 
+    font-size: 13px;
+
     padding-bottom: 5vw;
 
     border-bottom: 0.5px solid #ccc;
 
     width: 80%
+
+    
 
 
 }
@@ -394,6 +398,7 @@ nav {
 .skills-item{
 
     padding-top: 10vh;
+    font-size: 13px;
 }
 
 
@@ -629,26 +634,409 @@ footer {
 
 
 
+/* Base styles are already defined above this comment */
+/* Base styles are already defined above this comment */
+
+
+
+/* Styles for devices with a maximum width of 768px (mobile devices) */
+@media (max-width: 768px) {
+
+
+    .home-grid {
+        display: grid;
+        grid-template-columns: 0.6fr 1fr; /* Two equal columns */
+        grid-template-rows: 200px 1fr; /* First row fixed, second row flexible */
+        grid-template-areas:
+            "profile info"
+            "profile shapes";
+        align-items: left;
+        text-align: left;
+        padding: 0px;
+        padding-top: 20vh;    /* 20% of the viewport's height */
+        padding-bottom: 20vh; /* 20% of the viewport's height */
+        gap: 10px;
+        border-bottom: 0.5px solid #ccc;
+    }
+    
+    
+    .profile-pic {
+        grid-area: profile;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; /* Added for vertical centering */
+    }
+    
+    .profile-pic img {
+        width: 30vw;
+        height: 30vw;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+   
+
+
+    .intro {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start; /* Center items horizontally */
+        gap: 2px; /* Space between items */
+    }
+    
+    .intro h1, .intro p {
+        line-height: 1.2;  /* Tightens up the line spacing */
+    }
+    
+    .intro h1 {
+        font-size: 30px;  /* Adjust the size as needed */
+        font-weight: 800; /* Makes the font bold, adjust as needed */
+        color: #333;  /* Set the color if needed */
+        margin-bottom: 0;  /* Adjust spacing below the heading */
+    }
+    
+    .intro p {
+        font-size: 8px;  /* Or your preferred size for the description */
+        margin-top: 0;  /* Remove any top margin to minimize space with the header */
+    }
+    
+    .intro .role, .intro .interest {
+        font-size: 8px;  /* Adequate size for details */
+        line-height: 1.1;  /* Good line spacing for readability */
+    }
+    
+    .intro .role {
+        margin-bottom: 0;  /* Removes space below the role if you want a tight line spacing */
+    }
+    
+    .intro .interest {
+        margin-top: 0;  /* Removes space above the interest if you want tight line spacing */
+    }
+    .nav-shapes {
+        grid-area: shapes;
+        display: flex;
+        flex-direction: row; /* Keeps shapes in a row */
+        justify-content: flex-start; /* Even spacing around each shape */
+        gap: 5px;
+        
+    }
+    
+    .shape {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 5px; /* Reduced padding */
+        font-size: 10px; /* Reduced font size for better fit */
+        min-width: 30px; /* Reduced width */
+        height: 30px; /* Reduced height */
+        text-align: center;
+        border-radius: 5px;
+        font-family: 'Roboto';
+        transition: filter 0.3s ease; 
+        
+    }
+    
+    
+    .circle { background-color: #F2A900; border-radius: 50%; }
+    .rectangle { background-color: #F1503B; }
+    .trapezoid { background-color: #00A550; clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%); }
+    .hexagon { background-color: #30BFBF; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+    
+    /* Hover effects to lighten the background color */
+    .shape:hover {
+        filter: brightness(1.5); /* Lighten the background color by 20% */
+    }
+    
+    
+    /* Adjust the left margin if necessary */
+    .nav-shapes {
+        margin-left: 0; /* Adjust this value to match the alignment with 'Bike Qian' text */
+    }
+    
 
 
 
 
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  /* Centers content horizontally */
+        text-align: left;
+        padding-top: 20vh;
+        padding-bottom: 20vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        gap: 20px;
+        border-bottom: 0.5px solid #ccc;
+        width: 100%;  /* Ensures the container takes full width */
+    }
+    
+    .about-header, .education-shape {
+        width: 100%;  /* Full width for alignment purposes */
+        display: flex;
+        justify-content: center;  /* Centers the header shapes */
+        align-items: center;
+        padding: 10px 0;  /* Adds padding for visual spacing */
+    }
+    
+    .shape1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-family: 'Roboto';
+        text-decoration: none;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        background-color: #F2A900;  /* Example: About circle color */
+        border-radius: 50%;  /* Makes it circular */
+        margin-right: 20px;
+    }
+    
+    .triangle {
+        width: 110px;
+        height: 100px;
+        background-color: #4CAF50;
+        clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 18px 0;
+    }
+    
+    .about-text, .content {
+        width: 100%;  /* Full width to utilize space */
+        font-size: 10px;  /* Increases font size for readability */
+    }
+    
+    .about-text {
+        margin: 0;  /* Removes default margin */
+        padding-bottom: 20px;  /* Adds padding below the text */
+    }
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  /* Center aligns the content */
+    }
+    
+    .column.education {
+        text-size-adjust: 10px;
+        align-items: flex-start;  /* Aligns educational list items to the start */
+        
+    }
+    
+    .column.education ul {
+       text-size-adjust: 10px;
+        list-style-type: none;  /* Removes bullet points */
+    }
+    
+    .education-shape {
+        width: 20vh;  /* Auto width for natural content size */
+        margin-top: 10vh;  /* Vertical spacing */
+    }
+    
+
+    #experience {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        padding-top: 20vh;
+        padding-bottom: 20vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        gap: 20px;
+        border-bottom: 0.5px solid #ccc;
+    }
+
+    #experience ul {
+        font-size: 10px;  /* Sets the font size to 14px; adjust as needed */
+        color: #333;  /* Optional: sets the text color */
+        line-height: 1.6;  /* Optional: sets the line height for better readability */
+        margin-left: 20px;  /* Adds indentation to the list */
+        padding: 10px 0;  /* Adds vertical padding for visual separation between list items */
+    }
+    
+    #experience li {
+        padding-bottom: 5px;  /* Adds space below each list item */
+    }
+    
+    .experience-shape, .skills-shape {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;  /* Space below each shape for separation */
+    }
+    
+    .shape2 {
+        color: white;
+        font-weight: bold;
+        font-family: 'Roboto';
+        text-decoration: none;
+        width: 100px;
+        height: 100px;
+        background-color: #F2A900;  /* Adjust colors as needed */
+        margin-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .experience-item, .skills-item {
+        width: 80%;  /* Controls width of text content */
+        font-size: 16px;
+        padding: 20px 0;
+    }
+    
+    .experience-item h3, .skills-item h3 {
+        font-weight: bold;
+        font-family: 'Roboto';
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    
+    /* Adjusting the trapezoid and parallelogram shapes */
+    .trapezoid1, .parallelogram {
+        width: 100px;
+        height: 100px;
+        clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+        background-color: #00A550;  /* Adjust background color as needed */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .skills-shape {
+        margin-top: 10px;  /* Adds space above the skills section */
+    }
+    
+    /* CSS for Projects Section */
+    #projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20vh 5vw;
+        border-bottom: 0.5px solid #ccc;
+        gap: 20px;
+    }
+    
+    #projects h3 {
+        font-size: 10px;  /* Sets the font size to 20px; adjust as needed */
+        font-weight: bold;  /* Keeps the text bold, enhancing visibility */
+        color: #333;  /* Optional: sets a specific text color if needed */
+        margin-bottom: 10px;  /* Adds space below the header for separation */
+    }
+    
+    
+    .project-card {
+        display: flex;
+        flex-direction: column;  /* Stacks info and image vertically */
+        align-items: center;
+        width: 80%;  /* Control width to manage spacing */
+        margin-bottom: 30px;  /* Space between project cards */
+        text-align: left;
+        font-size: 10px;
+    }
+    
+    .project-info {
+        width: 100%;  /* Full width to match the container */
+    }
+    
+    .project-image {
+        width: 100%;  /* Adjust image width to full container width */
+        margin-top: 10px;  /* Space above the image */
+    }
+    
+    .project-image img {
+        width: 100%;  /* Images take full width of their container */
+        height: auto;
+        border-radius: 5px;
+    }
+    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .contact-container {
+        display: flex;
+        flex-direction: column;  /* Changes layout to stack vertically */
+        justify-content: center;
+        align-items: center;  /* Centers the content horizontally */
+        margin-top: 15vh;
+        margin-bottom: 15vh;
+        margin-left: 0px;
+       
+        width: 100%;  /* Ensures the container takes full width */
+    }
+    
+    .contact-details, .contact-form {
+        width: 100%;  /* Each child takes full width of the container */
+        max-width: 500px;  /* Sets a max width for larger screens */
+        display: flex;
+        flex-direction: column;  /* Ensures content within each is stacked vertically */
+        align-items: center;  /* Centers the content of each child */
+        align-items: center; /* Center-align the content of details and form */
+        text-align: center; /* Centers the text inside the container */
+        padding: 20px;  /* Adds padding inside each section for spacing */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Optional: adds shadow for better separation */
+        margin-bottom: 20px;  /* Adds space between the details and the form */
+    }
+    
+    .contact-form form {
+        width: 100%;  /* Ensures the form takes full width of its container */
+        display: grid;
+        grid-template-rows: repeat(3, auto); /* Three rows */
+        gap: 20px; /* Uniform space between all grid items */
+        padding: 20px; /* Padding around the form */
+    }
+    
+    /* Update form input group layout for mobile responsiveness */
+    .contact-form .form-group1,
+    .contact-form .form-group2,
+    .contact-form .form-group3 {
+        display: flex;
+        flex-direction: column;  /* Stacks input fields vertically */
+        gap: 10px;  /* Space between each field */
+        width: 100%;  /* Full width to utilize the container space */
+    }
+    
+    /* Adjust input sizes for better visual appeal */
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        width: 100%; /* Full width to fit their container */
+        padding: 8px;
+        border: 1px solid #ccc;
+    }
+    
+    /* Adjustments for submit button to maintain aesthetics */
+    .contact-form button {
+        width: 100%; /* Full width for better mobile usability */
+        padding: 10px; /* Better touch area */
+        background-color: #e6b800; /* Maintains the yellow background */
+        color: white; /* Ensures text is white */
+        border-radius: 5px; /* Softens the corners slightly */
+        cursor: pointer; /* Indicates the button is clickable */
+    }
+    
+    .contact-form button:hover {
+        background-color: #d6a700; /* Slightly darker on hover for feedback */
+    }
+    
+    /* Enhancements for accessibility and visual hierarchy */
+    .email-label {
+        font-size: 18px;  /* Slightly reduced for better hierarchy */
+        font-weight: bold;  /* Ensures emphasis */
+    }
+    
+}
 
